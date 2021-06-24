@@ -69,9 +69,16 @@ export function Room() {
             value={newQuestion}
           />
           <div className="form-footer">
-            <span>
-              To submit a question <button>please login.</button>
-            </span>
+            {user ? (
+              <div className="user-info">
+                <img src={user.avatar} alt={user.name} />
+                <span>{user.name}</span>
+              </div>
+            ) : (
+              <span>
+                To submit a question <button>please login.</button>
+              </span>
+            )}
             <Button type="submit" disabled={!newQuestion || !user}>
               Send question
             </Button>
