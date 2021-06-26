@@ -1,18 +1,18 @@
 import { useHistory } from "react-router-dom";
 import { FormEvent, useState } from "react";
 
-import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import googleIconImg from "../assets/images/google-icon.svg";
+import illustrationImg from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import googleIconImg from "../../assets/images/google-icon.svg";
 
-import { Button } from "../components/Button";
-import { useAuth } from "../hooks/useAuth";
+import { Button } from "../../components/button/button.component";
+import { useAuth } from "../../hooks/useAuth";
 
-import { database } from "../services/firebase";
+import { database } from "../../services/firebase";
 
-import "../styles/auth.scss";
+import "./home-page.styles.scss";
 
-export function Home() {
+export function HomePage() {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
   const [roomCode, setRoomCode] = useState("");

@@ -1,14 +1,15 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
+import { Button } from "../../components/button/button.component";
+import { RoomCode } from "../../components/room-code/room-code.component";
 
-import logoImg from "../assets/images/logo.svg";
+import logoImg from "../../assets/images/logo.svg";
 
-import "../styles/room.scss";
-import { useAuth } from "../hooks/useAuth";
-import { database } from "../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import { database } from "../../services/firebase";
+
+import "./room-page.styles.scss";
 
 type FirebaseQuestions = Record<
   string,
@@ -38,7 +39,7 @@ type RoomsParams = {
   id: string;
 };
 
-export function Room() {
+export function RoomPage() {
   const { user } = useAuth();
   const params = useParams<RoomsParams>();
   const [newQuestion, setNewQuestion] = useState("");
