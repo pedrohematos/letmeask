@@ -1,15 +1,17 @@
-import { FormEvent, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 import { Button } from "../../components/button/button.component";
 import { RoomCode } from "../../components/room-code/room-code.component";
 import { Question } from "../../components/question/question.component";
 
-import { useAuth } from "../../hooks/useAuth";
-import { database } from "../../services/firebase";
+//import { useAuth } from "../../hooks/useAuth";
+
 import { useRoom } from "../../hooks/useRoom";
+import { database } from "../../services/firebase";
 
 import logoImg from "../../assets/images/logo.svg";
+import deleteImg from "../../assets/images/delete.svg";
+
 import "./admin-room-page.styles.scss";
 
 type RoomsParams = {
@@ -17,11 +19,32 @@ type RoomsParams = {
 };
 
 export function AdminRoomPage() {
-  const { user } = useAuth();
+  //const { user } = useAuth();
+  const history = useHistory();
   const params = useParams<RoomsParams>();
   const roomId = params.id;
+
   const { title, questions } = useRoom(roomId);
-  const [newQuestion, setNewQuestion] = useState("");
+
+  async function handleCloseRoom() {
+    if (window.confirm("Are you sure that you would like to close the room?")) {
+      await database.ref(`rooms/${roomId}`).update({
+        closedAt: new Date(),
+      });
+
+      history.push("/");
+    }
+  }
+
+  async function handleDeleteQuestion(questionId: string) {
+    if (
+      window.confirm(
+        "Are you sure that you would like to delete this question?"
+      )
+    ) {
+      await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
+    }
+  }
 
   return (
     <div id="admin-room-page">
@@ -30,7 +53,9 @@ export function AdminRoomPage() {
           <img src={logoImg} alt="Letmeaks" />
           <div>
             <RoomCode code={params.id} />
-            <Button isOutlined>Close room</Button>
+            <Button isOutlined onClick={handleCloseRoom}>
+              Close room
+            </Button>
           </div>
         </div>
       </header>
@@ -52,7 +77,14 @@ export function AdminRoomPage() {
               key={question.id}
               content={question.content}
               author={question.author}
-            />
+            >
+              <button
+                type="button"
+                onClick={() => handleDeleteQuestion(question.id)}
+              >
+                <img src={deleteImg} alt="Delete question" />
+              </button>
+            </Question>
           ))}
         </div>
       </main>
