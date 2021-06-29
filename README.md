@@ -33,7 +33,7 @@ Open localhost:3000. The app will be available there:
 
 ## 💻 Project
 
-[Letmeask](https://letmeask-matos.web.app/) Create digital rooms for questions and answers!
+[Letmeask](https://letmeask-matos.web.app/)! Create digital rooms for questions and answers!
 
 This is a project developed during the **[Next Level Week](https://nextlevelweek.com/)**, presented by **[@Rocketseat](https://github.com/Rocketseat)** during June 20-27, 2021.
 
