@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+<p align="center">
+  <img alt="Headset" src=".github/icon.svg" width="160px">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🧪 Technologies
 
-## Available Scripts
+This project was developed using the following technologies:
 
-In the project directory, you can run:
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 
-### `yarn start`
+## 🚀 Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the project and access the folder letmeask
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+$ git clone https://github.com/pedrohematos/letmeask.git && cd letmeask
+```
 
-### `yarn test`
+To run the project, follow the steps below:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install the dependencies
+$ yarn install
 
-### `yarn build`
+# Start the app in dev-mode
+$ yarn dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open localhost:3000. The app will be available there:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [localhost:3000](http://localhost:3000/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Project
 
-### `yarn eject`
+[Letmeask](https://letmeask-matos.web.app/) Create digital rooms for questions and answers!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a project developed during the **[Next Level Week](https://nextlevelweek.com/)**, presented by **[@Rocketseat](https://github.com/Rocketseat)** during June 20-27, 2021.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔖 Layout
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You can view the project layout through the links below:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Layout Web](https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask?node-id=0%3A1)
 
-## Learn More
+Remembering that you need to have a [Figma](http://figma.com/) account to access it.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📝 License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+
+---
+
+<p align="center">Made by Pedro Matos</p>
