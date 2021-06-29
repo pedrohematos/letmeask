@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Headset" src=".github/src/assets/images/icon.svg" width="160px">
+  <img alt="Letmeask" src="https://github.com/pedrohematos/letmeask/blob/master/src/assets/images/logo.svg" width="160px">
 </p>
 
 ## 🧪 Technologies
